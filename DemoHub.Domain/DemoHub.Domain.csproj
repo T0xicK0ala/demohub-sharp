@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Copyright></Copyright>
+    <Authors>toxic koala</Authors>
+    <RepositoryType>Git</RepositoryType>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <Description>Business Entities, Enums, Exceptions, and logic abstraction</Description>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl></RepositoryUrl>
+    <PackageTags>Business Entities, Enums, Exceptions, and logic abstraction</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.6.0" />
+  </ItemGroup>
+
+</Project>

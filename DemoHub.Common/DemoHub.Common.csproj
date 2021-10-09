@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Authors>toxic koala</Authors>
+    <Description>Cross-cutting concerns</Description>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl></RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>Cross-cutting concerns, UTC time</PackageTags>
+    <Copyright></Copyright>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DemoHub.Common\DemoHub.Common.csproj" />
+    <ProjectReference Include="..\DemoHub.Persistence\DemoHub.Persistence.csproj" />
+  </ItemGroup>
+
+
+</Project>

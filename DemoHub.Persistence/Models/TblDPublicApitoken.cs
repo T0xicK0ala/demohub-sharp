@@ -1,0 +1,41 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace DemoHub.Persistence.Models
+{
+    [Table("tbl_D_PublicAPIToken")]
+    public partial class TblDPublicApitoken
+    {
+        [Key]
+        [Column("kPublicAPIToken")]
+        public int KPublicApitoken { get; set; }
+        [Required]
+        [Column("sToken")]
+        public string SToken { get; set; }
+        [Column("dExpiryDate", TypeName = "date")]
+        public DateTime DExpiryDate { get; set; }
+        [Column("fkMessageOrigin")]
+        public int FkMessageOrigin { get; set; }
+        [Column("fkUser")]
+        public int FkUser { get; set; }
+        [Column("bIsActive")]
+        public bool BIsActive { get; set; }
+        [Column("vCreatedBy")]
+        public int VCreatedBy { get; set; }
+        [Column("dt2CreatedAt")]
+        public DateTime Dt2CreatedAt { get; set; }
+        [Column("vUpdatedBy")]
+        public int? VUpdatedBy { get; set; }
+        [Column("dt2UpdatedAt")]
+        public DateTime Dt2UpdatedAt { get; set; }
+        [Required]
+        [Column("zVersion")]
+        public byte[] ZVersion { get; set; }
+
+        [ForeignKey(nameof(FkUser))]
+        [InverseProperty(nameof(TblSUser.TblDPublicApitoken))]
+        public virtual TblSUser FkUserNavigation { get; set; }
+    }
+}

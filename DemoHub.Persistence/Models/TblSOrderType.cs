@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace DemoHub.Persistence.Models
+{
+    [Table("tbl_S_OrderType", Schema = "chs")]
+    public partial class TblSOrderType
+    {
+        public TblSOrderType()
+        {
+            TblDChesstransactionRequest = new HashSet<TblDChesstransactionRequest>();
+        }
+
+        [Key]
+        [Column("kOrderType")]
+        public int KOrderType { get; set; }
+        [Required]
+        [Column("sOrderType")]
+        [StringLength(3)]
+        public string SOrderType { get; set; }
+        [Required]
+        [Column("sOrderTypeDescription")]
+        [StringLength(30)]
+        public string SOrderTypeDescription { get; set; }
+        [Column("bIsActive")]
+        public bool BIsActive { get; set; }
+        [Column("vCreatedBy")]
+        public int VCreatedBy { get; set; }
+        [Column("dt2CreatedAt")]
+        public DateTime Dt2CreatedAt { get; set; }
+        [Column("vUpdatedBy")]
+        public int? VUpdatedBy { get; set; }
+        [Column("dt2UpdatedAt")]
+        public DateTime Dt2UpdatedAt { get; set; }
+        [Required]
+        [Column("zVersion")]
+        public byte[] ZVersion { get; set; }
+
+        [InverseProperty("FkOrderTypeNavigation")]
+        public virtual ICollection<TblDChesstransactionRequest> TblDChesstransactionRequest { get; set; }
+    }
+}
