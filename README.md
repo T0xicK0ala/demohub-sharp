@@ -1,6 +1,6 @@
-# DemoHub.Core
+# DemoHub
 
-DemoHub.Core is built using .NET Core and Entity Framework Core.
+DemoHub is built using .NET Core and Entity Framework Core.
 
 ## Getting Started
 
@@ -37,4 +37,4 @@ Follow these steps to get your development environment set up:
 
 ## License
 
-Confidential
+GPL v3
